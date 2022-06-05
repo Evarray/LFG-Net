@@ -1,7 +1,9 @@
 # LFG-Net: Low-level Feature Guided Network for Precise Ship Instance Segmentation in SAR Images
 This project hosts the code for reproducing experiment results of LFG-Net  
   
-LFG-Net is based on [mmdetection](https://github.com/open-mmlab/mmdetection) framework. Please follow the official guideline of installing the [prerequisites](https://github.com/open-mmlab/mmdetection/blob/master/docs/en/get_started.md/#Installation)
+LFG-Net is based on [mmdetection](https://github.com/open-mmlab/mmdetection) framework. Please follow the official guideline of installing the [prerequisites](https://github.com/open-mmlab/mmdetection/blob/master/docs/en/get_started.md/#Installation)  
+
+![](demo/Network_Architecture.png) 
 ## Highlights
 * Small object instance segmentation framework for SAR images. 
 * Enhance the low-level features from image level to instance level.
@@ -41,6 +43,8 @@ Ship instance segmentation results on HRSID. The models are trained for 12 epoch
 |        SCNet        | 54.4 | 82.4 | 65.9 | 54.1 | 62.1 | 13.2 |  94.29M |  8.6 |
 |       LFG-Net       | 59.7 | 88.5 | 72.3 | 59.7 | 64.2 | 11.8 | 116.78M |  6.6 |
 |       LFG-Net*      | 63.9 | 90.1 | 76.8 | 63.6 | 69.5 | 42.5 | 174.28M |  5.0 |
+
+![](demo/HRSID_results.png) 
 ## Performance on AirSARShip
 Ship detection and ship instance segmentation results on AirSARShip dataset. The models are trained for 36 epoches with the initial learning rate at 0.0025. In addition to the MS COCO evaluation metrics, Parameters, and FPS, we also provide the gap between AP<sup>Bbox</sup> and AP<sup>Mask</sup>.
 |        Model        |  AP<sup>Bbox</sup>  | AP<sub>50</sub> | AP<sub>75</sub> |  AP<sub>S</sub> |  AP<sub>M</sub> |  AP<sub>L</sub> |  AP<sup>Mask</sup>  | AP<sub>50</sub> | AP<sub>75</sub> |  AP<sub>S</sub> |  AP<sub>M</sub> |  AP<sub>L</sub> | Gap | Params. |  FPS |
@@ -56,6 +60,8 @@ Ship detection and ship instance segmentation results on AirSARShip dataset. The
 |      Detectors      | 61.7 | 85.0 | 69.2 | 51.5 | 67.1 |  37.5 |  54.5 | 81.5 | 63.6 | 42.6 | 58.9 | 42.6 |  7.2 | 134.00M | 7.7 |
 |        SCNet        | 60.1 | 83.2 | 67.7 | 50.8 | 65.6 |  32.9 |  54.3 | 80.6 | 63.5 | 42.8 | 58.7 | 42.5 |  5.8 |  94.29M | 10.5 |
 |       LFG-Net*      | 64.8 | 84.1 | 73.6 | 58.8 | 69.3 |  39.2 |  61.8 | 82.1 | 70.8 | 53.8 | 65.3 | 53.4 |  3.0 | 174.28M | 9.0 |
+
+![](demo/AirSARShip_results.png) 
 ## Citation
 If the project helps your research, please cite our paper:
 ```
