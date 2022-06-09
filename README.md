@@ -6,7 +6,7 @@ LFG-Net is based on [mmdetection](https://github.com/open-mmlab/mmdetection) fra
 ![](demo/Network_Architecture.png) 
 ## Highlights
 * Small object instance segmentation framework for SAR images. 
-* Enhance the low-level features from image level to instance level.
+* Enhancing the low-level features from image level to instance level.
 * LFG-Net achieves `state-of-the-art` instance segmentation performance on `HRSID`, `SSDD`, and `AirSARShip dataset`.
 ## Requirements
 * `ubuntu == 18.04`
@@ -16,7 +16,7 @@ LFG-Net is based on [mmdetection](https://github.com/open-mmlab/mmdetection) fra
 * `pytorch == 1.7.0`, `torchvision == 0.8.1`
 ## Usage
 ### Training 
-To train LFG-Net model with original setting of our paper, run:
+To train LFG-Net model with original settings of our paper, run:
 ```
 python train.py
 ```
@@ -26,7 +26,7 @@ To inference the trained model with a single gpu, run:
 python tools/test.py <CONFIG_FILE> <DET_CHECKPOINT_FILE> --eval bbox segm
 ```
 ## Performance on HRSID
-Ship instance segmentation results on HRSID. The models are trained for 12 epoches with the initial learning rate at 0.0025. Results are evaluated with MS COCO evaluation metrics, Parameters, and FPS on Quadaro RTX 6000.
+Ship instance segmentation results on HRSID. The models are trained for 12 epochs with the initial learning rate at 0.0025. Results are evaluated with MS COCO evaluation metrics, Parameters, and FPS on Quadaro RTX 6000.
 |        Model        |  AP  | AP<sub>50</sub> | AP<sub>75</sub> |  AP<sub>S</sub> |  AP<sub>M</sub> |  AP<sub>L</sub> | Params. |  FPS |
 |:-------------------:|:----:|:----:|:----:|:----:|:----:|:----:|:-------:|:----:|
 |         SOLO        | 13.8 | 27.8 | 13.8 | 14.2 | 13.6 |  3.8 |  54.92M | 14.2 |
@@ -46,7 +46,7 @@ Ship instance segmentation results on HRSID. The models are trained for 12 epoch
 
 ![](demo/HRSID_results.png) 
 ## Performance on AirSARShip
-Ship detection and ship instance segmentation results on AirSARShip dataset. The models are trained for 36 epoches with the initial learning rate at 0.0025. In addition to the MS COCO evaluation metrics, Parameters, and FPS, we also provide the gap between AP<sup>Bbox</sup> and AP<sup>Mask</sup>.
+Ship detection and ship instance segmentation results on AirSARShip dataset. The models are trained for 36 epochs with the initial learning rate at 0.0025. In addition to the MS COCO evaluation metrics, Parameters, and FPS, we also provide the gap between AP<sup>Bbox</sup> and AP<sup>Mask</sup>.
 |        Model        |  AP<sup>Bbox</sup>  | AP<sub>50</sub> | AP<sub>75</sub> |  AP<sub>S</sub> |  AP<sub>M</sub> |  AP<sub>L</sub> |  AP<sup>Mask</sup>  | AP<sub>50</sub> | AP<sub>75</sub> |  AP<sub>S</sub> |  AP<sub>M</sub> |  AP<sub>L</sub> | Gap | Params. |  FPS |
 |:-------------------:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:-------:|:----:|
 |      Mask R-CNN     | 56.8 | 82.2 | 64.0 | 49.4 | 61.9 |  25.7 |  49.1 | 77.1 | 56.9 | 40.1 | 53.3 | 30.8 |  7.7 |  43.75M | 21.8 |
