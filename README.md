@@ -69,6 +69,8 @@ If the project helps your research, please cite our paper:
 title={LFG-Net: Low-level Feature Guided Network for Precise Ship Instance Segmentation in SAR Images},
 author={Wei Shunjun, Zeng Xiangfeng, Zhang Hao, Zhou Zichen, Shi Jun, Zhang Xiaoling},
 journal={IEEE Transactions on Geoscience and Remote Sensing},
+volume={60},
 year={2022},
+publisher={IEEE}
 }
 ```
